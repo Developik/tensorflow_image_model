@@ -1,4 +1,4 @@
-# tensorflow image model
+# Sequential Keras Image Model
 
 - Added save of the current model
 - Tested options for time optimization of a suggested model
