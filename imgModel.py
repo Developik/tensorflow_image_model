@@ -16,7 +16,7 @@ import pathlib
 #https://www.tensorflow.org/tutorials/images/classification#standardize_the_data
 
 
-# Model 2, epoch = 5
+# Model 2, epoch = 5, 45% certainty
 '''
 model = Sequential([
   data_augmentation,
@@ -28,7 +28,7 @@ model = Sequential([
 
 ])
 '''
-# Model 3, epoch = 2
+# Model 3, epoch = 2, 60% certainty 
 '''
 model = Sequential([
   data_augmentation,
@@ -135,8 +135,6 @@ num_classes = 5
 model = Sequential([
   data_augmentation,
   layers.experimental.preprocessing.Rescaling(1./255, input_shape=(img_height, img_width, 3)),
-  layers.Conv2D(16, 3, padding='same', activation='relu'),
-  layers.MaxPooling2D(),
   layers.Dropout(0.2),
   layers.Flatten(input_shape=(img_height, img_width, 3)),
   layers.Dense(128, activation='relu'),
